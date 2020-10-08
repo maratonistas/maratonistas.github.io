@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #071826;
+  --color-secondary: #0D2840;
+  --color-gray: #596273;
+  --color-pink: #C09AD9;
+  --color-light: #D9D0D0;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-primary);
+}
+
+body {
+  background-color: var(--color-gray);
+  display: flex;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  margin: 1rem 0;
+  padding: 0px;
+}
+
+
+#vertical-bar {
+  height: 100vh;
+  max-width: 100px;
+  width: 100%;
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#vertical-bar .nav {
+  margin-bottom: 20px;  
+}
+
+#vertical-bar .social {
+  display: flex;
+}
+
+#vertical-bar .social + a {
+  margin-top: 2rem;
+}
+
+#vertical-bar .social img {
+  width: 70px;
+}
+
+
+#general-info {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 40px;
+}
+
+#general-info h2 {
+  font-size: 2rem;
+  color: var(--color-light);
+}
+
+#general-info input {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+#members {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#members .member {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--color-light);
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+#members .member + a {
+  margin-top: 20px;
+}
+
+#members .member .info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+#members .member .info strong {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#members .member .info span {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#members .member img {
+  max-width: 50px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+#posts {
+  flex: 1;
+  background-color: var(--color-light);
+}
+
+
+#logo {
+  flex: 1;
+  font-size: 6rem;
+  justify-content: center;
+  display: flex;
+  color: var(--color-gray);
+  font-weight: bolder;
+  text-shadow: var(--color-primary) 0px 3px 1px;
+  font-weight: 900;
+}
+

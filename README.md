@@ -1,17 +1,24 @@
-# Maratonistas
+## Site dos Maratonistas
 
-Essa organização tem o objetivo de juntar os projetos dos maratonistas. Podemos criar times e criar projetos e colaborarmos.
+O site está sendo feito com o uso do jekyll. https://jekyllrb.com/
+Ele é um gerador de site baseado em conteúdo do tipo markdown. 
+O github realiza toda a criação do site após subirmos para o repositório tornando 
+a atualização simples. Mesmo as atualizações de layout.
 
-Este é o docuemnto principal que tem como objetivo organizar todass essa estrutura e guiar os interessados a organizar seus projetos e times.
+### Fiquem a vontade para sugerir ou realizar novas atualizações
 
-Este documento deve ser sempre editado pela comunidade para irmos definindo as melhores prátias de acordo com o tempo.
+As atualizações de código
 
-# 1. Como será realizada as alterações deste arquivo
+1. Criar solicitação de alteração na insue
+2. Aguardar liberação da insue para desenvolvimento
+3. Realizar clone do projeto do site
+4. Realizar criar uma nova branch da sua atualização. ** Por exemplo: branch-correcao-portugues ** 
+5. Realizar a alteração na branch
+6. Subir branch para o servidor 
+7. Enviar pull request para a comunidade.
 
-Penso que tudo deve ser feito da menira mais simples. Podemos usar as insues para poder alterar as informações aqui deste conteudo. Pensei em enumerar cada tópico para ficar mais fácil na hora da edição. Assim, quando alguém achar que deve haver alteração no documento pode indicar passando a numeração da sessão. 
+### Atualizações de postagens
 
-Exemplo, alterar o título da sessão **1.** para **outra coisas**
+Podemos criar no site, postagens sobre a maratona. Sobre essa e outras que participarmos. 
 
-
-Vamos lá galera, vamos tentar sempre atualizar as informações aqui pra conseguirmos nos organizar.
-### Maratonistas
+- Então podemos ter dentro do site, uma área de postagens de cada um dos usuários. 
