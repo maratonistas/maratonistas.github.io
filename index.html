@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR" ng-app="SPA">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,37 +34,20 @@
   
   <!-- members bar -->
   <div id="general-info">
-    <h2> Membros </h2>
 
-    <input type="text" name="" value="" placeholder="Encontre pelo github"/>
+    <div class="form">
+      <h2> Membros </h2>
+      <input type="text" name="" value="" placeholder="Encontre pelo github"/>
+    </div>
 
-    <div id="members">
-
-      <a href="http://github.com.br/brunoom1" class="member">
+    <div id="members" ng-controller="Members as members" >
+      <a href="http://github.com.br/brunoom1" class="member" ng-repeat="member in members.list">
         <img src="https://avatars1.githubusercontent.com/u/863357?s=460&u=6677f2c12db7bb0db6d51f3ce097f310f5a5a9bb&v=4" />        
         <div class="info">
           <strong> Gabriel Mendonça </strong>
           <span> brunoom1 </span>
         </div>
       </a>        
-
-      <a href="http://github.com.br/brunoom1" class="member">
-        <img src="https://avatars1.githubusercontent.com/u/863357?s=460&u=6677f2c12db7bb0db6d51f3ce097f310f5a5a9bb&v=4" />        
-        <div class="info">
-          <strong> Gabriel Mendonça </strong>
-          <span> brunoom1 </span>
-        </div>
-      </a>        
-
-
-      <a href="http://github.com.br/brunoom1" class="member">
-        <img src="https://avatars1.githubusercontent.com/u/863357?s=460&u=6677f2c12db7bb0db6d51f3ce097f310f5a5a9bb&v=4" />        
-        <div class="info">
-          <strong> Gabriel Mendonça </strong>
-          <span> brunoom1 </span>
-        </div>
-      </a>        
-
     </div>
 
   </div>
@@ -76,6 +59,9 @@
 
     </div>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <script src="assets/js/app.js"></script>
 
 </body>
 </html>

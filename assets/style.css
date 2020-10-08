@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 #vertical-bar {
   height: 100vh;
   max-width: 100px;
@@ -49,8 +50,28 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;  
 }
 
+@keyframes socialLogos {
+  0% {
+    margin-bottom: -100px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
+
 #vertical-bar .social {
   display: flex;
+  background-color: var(--color-light);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  animation: socialLogos .5s;
+  transition: box-shadow .5s, transform .5s;
+}
+
+#vertical-bar .social:hover {
+  box-shadow: #596273 -3px 6px 2px;
+  transform: rotate(10deg);
 }
 
 #vertical-bar .social + a {
@@ -62,6 +83,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+@keyframes entryLeft {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
 #general-info {
   display: flex;
   flex-direction: column;
@@ -69,6 +99,13 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 500px;
   width: 100%;
   padding: 10px 40px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#general-info .form {
+  position: relative;
+  animation: entryLeft .5s;
 }
 
 #general-info h2 {
@@ -83,14 +120,23 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
 }
 
+#general-info input {
+  outline: none;
+}
+
+
 
 #members {
+  position: relative;
+  left: 0px;
+  animation: entryLeft .5s;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
 
 #members .member {
+  position: relative;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -98,6 +144,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
+  left: 0px;
+  transition: box-shadow .5s, left .5s;
+}
+
+#members .member:hover {
+  box-shadow: var(--color-secondary) -2px 4px 4px;
+  left: 20px;
 }
 
 #members .member + a {
@@ -135,7 +188,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+@keyframes AnimationLogo {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  .5% {
+    top: 0;
+    opacity: 1;
+  }
+  10% {
+    color: var(--color-pink);
+  }
+  20% {
+    color: var(--color-primary)
+  }
+  30% {
+    color: var(--color-light);
+  }
+  40% {
+    color: var(--color-gray);
+  }
+  50% {
+    color: var(--color-secondary);
+  }
+  100% {
+  }
+}
+
+
 #logo {
+  position: relative;
+  top: 0px;
   flex: 1;
   font-size: 6rem;
   justify-content: center;
@@ -144,5 +228,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bolder;
   text-shadow: var(--color-primary) 0px 3px 1px;
   font-weight: 900;
+  animation: AnimationLogo 120s ;
 }
 
