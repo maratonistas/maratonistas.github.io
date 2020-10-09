@@ -9,16 +9,8 @@ a atualização simples. Mesmo as atualizações de layout.
 
 As atualizações de código
 
-1. Criar solicitação de alteração na insue
-2. Aguardar liberação da insue para desenvolvimento
-3. Realizar clone do projeto do site
-4. Realizar criar uma nova branch da sua atualização. ** Por exemplo: branch-correcao-portugues ** 
-5. Realizar a alteração na branch
-6. Subir branch para o servidor 
-7. Enviar pull request para a comunidade.
-
-### Atualizações de postagens
-
-Podemos criar no site, postagens sobre a maratona. Sobre essa e outras que participarmos. 
-
-- Então podemos ter dentro do site, uma área de postagens de cada um dos usuários. 
+1. Realizar clone do projeto do site
+2. Realizar criar uma nova branch da sua atualização. ** Por exemplo: branch-correcao-portugues ** 
+3. Realizar a alteração na branch
+4. Subir branch para o servidor 
+5. Enviar pull request para a master.
