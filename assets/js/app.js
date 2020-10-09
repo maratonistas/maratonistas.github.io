@@ -5,25 +5,44 @@
    * API Github - https://api.github.com/
    **/
 
-  function create_member (name, username, cover, link) {
+  function create_repository (object_data) {
     return ({
-      name: name, 
-      username: username, 
-      link: link,
-      cover: cover
+      id: object_data.id,
+      name: object_data.name,
+      full_name: object_data.full_name,
+      html_url: object_data.html_url,
+      owner: {
+        url: object_data.owner.url,
+        avatar_url: object_data.owner.avatar_url,
+        description: object_data.owner.description
+      }
     });
   }
 
-  function MembersController () {
-    this.list = [
-      create_member('Gabriel Mendonça', 'brunoom1', 'https://avatars1.githubusercontent.com/u/863357?s=460&u=6677f2c12db7bb0db6d51f3ce097f310f5a5a9bb&v=4', 
-        'https://github.com/brunoom1'),
-      create_member('Gabriel Mendonça', 'brunoom1', 'https://avatars1.githubusercontent.com/u/863357?s=460&u=6677f2c12db7bb0db6d51f3ce097f310f5a5a9bb&v=4', 
-        'https://github.com/brunoom1'),
-    ];
+  function RepositoriesController ($http) {
+    this.list = [];
+    var controller = this;
+
+    function setList (list) {
+      console.log(list);
+      controller.list = list;
+    }
+
+    $http.get('https://api.github.com/orgs/maratonistas/repos').then(function (response) {
+      if (response.status === 200) {
+        var data = response.data;
+        var repositories = [];
+        data.forEach(function (item) {
+          repositories.push(create_repository(item));
+        });
+        setList(repositories);
+      } else {
+        // não foi possível buscar repositórios
+      }
+    });
   }
 
   $.module('SPA', [])
-    .controller('Members', MembersController);
+    .controller('Repositories', RepositoriesController);
 
 })(angular);

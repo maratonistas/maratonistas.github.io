@@ -36,16 +36,16 @@
   <div id="general-info">
 
     <div class="form">
-      <h2> Membros </h2>
+      <h2> Repositórios </h2>
       <input type="text" name="" value="" placeholder="Encontre pelo github"/>
     </div>
 
-    <div id="members" ng-controller="Members as members" >
-      <a href="http://github.com.br/brunoom1" class="member" ng-repeat="member in members.list">
-        <img src="https://avatars1.githubusercontent.com/u/863357?s=460&u=6677f2c12db7bb0db6d51f3ce097f310f5a5a9bb&v=4" />        
+    <div id="repositories" ng-controller="Repositories as controller" >
+      <a href="{{ repository.html_url }}" class="repository" ng-repeat="repository in controller.list" target="_blank">
+        <img ng-src="{{ repository.owner.avatar_url }}" />        
         <div class="info">
-          <strong> Gabriel Mendonça </strong>
-          <span> brunoom1 </span>
+          <strong> {{ repository.name }} </strong>
+          <span> {{ repository.full_name }} </span>
         </div>
       </a>        
     </div>

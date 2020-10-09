@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-#members {
+#repositories {
   position: relative;
   left: 0px;
   animation: entryLeft .5s;
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 
-#members .member {
+#repositories .repository {
   position: relative;
   display: flex;
   justify-content: start;
@@ -148,16 +148,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: box-shadow .5s, left .5s;
 }
 
-#members .member:hover {
+#repositories .repository:hover {
   box-shadow: var(--color-secondary) -2px 4px 4px;
   left: 20px;
 }
 
-#members .member + a {
+#repositories .repository + a {
   margin-top: 20px;
 }
 
-#members .member .info {
+#repositories .repository .info {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
@@ -165,17 +165,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
 }
 
-#members .member .info strong {
+#repositories .repository .info strong {
   font-weight: 900;
   text-transform: uppercase;
 }
 
-#members .member .info span {
+#repositories .repository .info span {
   font-weight: 700;
   font-size: 1.2rem;
 }
 
-#members .member img {
+#repositories .repository img {
   max-width: 50px;
   width: 100%;
   border-radius: 50%;
