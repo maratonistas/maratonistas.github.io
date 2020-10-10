@@ -33,15 +33,15 @@
 
   
   <!-- members bar -->
-  <div id="general-info">
+  <div id="general-info" ng-controller="Repositories as controller">
 
     <div class="form">
       <h2> Repositórios </h2>
-      <input type="text" name="" value="" placeholder="Encontre pelo github"/>
+      <input type="text" placeholder="Encontre pelo github" ng-model="filter" />
     </div>
 
-    <div id="repositories" ng-controller="Repositories as controller" >
-      <a href="{{ repository.html_url }}" class="repository" ng-repeat="repository in controller.list" target="_blank">
+    <div id="repositories">
+      <a href="{{ repository.html_url }}" class="repository" ng-repeat="repository in controller.listFiltered" target="_blank">
         <img ng-src="{{ repository.owner.avatar_url }}" />        
         <div class="info">
           <strong> {{ repository.name }} </strong>
@@ -61,6 +61,11 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+  <!-- services -->
+  <script src="assets/js/services/repository.service.js"></script>
+
+  <!-- app -->
   <script src="assets/js/app.js"></script>
 
 </body>
