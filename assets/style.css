@@ -5,11 +5,11 @@
 }
 
 :root {
-  --color-primary: #071826;
-  --color-secondary: #0D2840;
-  --color-gray: #596273;
-  --color-pink: #C09AD9;
-  --color-light: #D9D0D0;
+  --color-primary: #022859;
+  --color-secondary: #144673;
+  --color-gray: #05aff2;
+  --color-pink: #05c7f2;
+  --color-light: #deedf2;
 }
 
 html, body {
